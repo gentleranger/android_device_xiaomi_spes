@@ -11,28 +11,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spes/spesn device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-# Inherit some common EuclidOS stuff.
-$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
+# Inherit some common lineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Product Specifics
-PRODUCT_NAME := euclid_spes
+PRODUCT_NAME := lineage_spes
 PRODUCT_DEVICE := spes
-PRODUCT_BRAND := Redmi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 11
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Boot Animaton
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# EuclidOS Flags
-EUCLID_BUILD_TYPE := OFFICIAL
-EUCLID_MAINTAINER := тαиνir
-EUCLID_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_PIXEL_LAUNCHER := true
-TARGET_SUPPORTS_TOUCHGESTURES := true
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
